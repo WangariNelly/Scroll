@@ -15,10 +15,11 @@
 const date = document.getElementById("date");
 date.innerHTML = new Date().getFullYear();
 
-const linksContainer = docuent.querySelector('.links-container');
+const linksContainer = document.querySelector('.links-container');
 const links = document.querySelector('.links');
 
 const navbarToggle = document.querySelector('.nav-toggle').addEventListener('click', () => {
+   // console.log('clicked')
     const linksHeight = links.getBoundingClientRect().height;
     const containerHeight = linksContainer.getBoundingClientRect().height;
     if (containerHeight === 0) {
@@ -26,6 +27,7 @@ const navbarToggle = document.querySelector('.nav-toggle').addEventListener('cli
     } else {
       linksContainer.style.height = 0;
     }
+     // console.log(linksContainer.getBoundingClientRect());
 });
 
 
